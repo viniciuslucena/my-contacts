@@ -50,11 +50,9 @@ export const InputSearchContainer = styled.div`
   }
 `;
 
-export const ListContainer = styled.div`
+export const ListHeader = styled.header`
   margin-top: 24px;
-
-  header {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 
     button{
       background: transparent;
@@ -68,8 +66,12 @@ export const ListContainer = styled.div`
         margin-right: 8px;
         font-weight: bold;
       }
+
+      img {
+        transform: ${({ orderBy }) => (orderBy === 'asc' ? 'rotate(180deg)' : 'rotate(0deg)')};
+        transition: transform 0.2s ease-in;
+      }
     }
-  }
 `;
 
 export const Card = styled.div`
