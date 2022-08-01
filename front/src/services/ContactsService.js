@@ -9,9 +9,9 @@ class ContactsService {
     return this.httpClient.get(`/contacts?orderBy=${orderBy}`);
   }
 
-  // async createContact(contact) {
-  //   return HttpClient.post(`/contact`, contact);
-  // }
+  async createContact(contact) {
+    return HttpClient.post('/contact', contact);
+  }
 }
 
 export default new ContactsService();
